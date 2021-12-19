@@ -1,0 +1,153 @@
+
+  @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+  html {
+    height: 100%;
+  }
+  
+  body {
+    font-family: "Fjalla One", sans-serif;
+    background: rgb(230, 230, 230);;
+    cursor: none;
+
+  }
+  
+  .container {
+    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 50%;
+    display: block;
+    position: absolute;
+    max-width: 225px;
+  }
+
+  
+  h1 {
+    color: rgb(230, 230, 230);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 42px;
+    margin: 0;
+    line-height: 47px;
+    letter-spacing: 2px;
+  }
+  
+  .title {
+    transform: translateX(-50%) rotate(-10deg);
+    display: block;
+    float: left;
+    left: 50%;
+    position: relative;
+  }
+  .title span {
+    transform: skew(-10deg);
+    display: block;
+    float: left;
+    text-shadow: #494949 1px 1px, #494949 2px 2px, #494949 3px 3px, #494949 4px 4px, #533d4a 5px 5px, #533d4a 6px 6px;
+    min-width: 10px;
+    min-height: 10px;
+    position: relative;
+  }
+  
+  .title:nth-child(1) {
+    color: #9f7453;
+  }
+  .title:nth-child(2) {
+    color: #828c84;
+  }
+  .title:nth-child(3) {
+    color: #7eb39a;
+  }
+  :hover.title:nth-child(3) {
+    color: #2c250f;
+
+  }
+
+  h1:hover span {
+    display: none
+  }
+  
+  h1:hover:before {
+    transform: translateX(-50%) rotate(-10deg)  skew(-10deg);
+    line-height: 30px;
+
+    content: "You're precious!";
+    font-size: 20;
+    display: block;
+    float: left;
+    text-shadow: #494949 1px 1px, #494949 2px 2px, #494949 3px 3px, #494949 4px 4px, #533d4a 5px 5px, #533d4a 6px 6px;
+    min-width: 10px;
+    min-height: 10px;
+    position: relative;
+    display: block;
+    float: left;
+    left: 50%;
+    position: relative;
+
+  }
+
+  .page-header:after {
+    animation: grain 8s steps(10) infinite;
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/paper-pattern.png);
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: 0.3;
+    position: fixed;
+    top: -110%;
+    width: 300%;
+  }
+  
+  @keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(7%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(3%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+  }
+
+  canvas {
+    display: block;
+  }
+  
+  .tooSmol {
+      display: none;
+  }
+
+  @media only screen and (max-width: 600px) {
+    canvas {
+      display: none;
+    }
+    .tooSmol {
+        display: block;
+      }
+    .big {
+        display: none;
+    }
+
+    .container {
+        top: 50%;
+    }
+    h1 {
+        font-size: 30px;
+  }
+  .title:nth-child(1) {
+    color: #fd775f
+  }
+  .title:nth-child(2) {
+    color: #ffb259;
+  }
+  .title:nth-child(3) {
+    color: #fffd7e;
+  }
+  .title:nth-child(4) {
+    color: #adff76;
+  }
+  .title:nth-child(5) {
+    color: #76d4ff;
+  }
+}
